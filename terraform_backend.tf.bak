@@ -1,0 +1,11 @@
+terraform {
+  backend "s3" {
+    profile        = "dsi" #dsi profile name
+    region         = "us-east-1"
+    bucket         = "project-poc369"
+    key            = "statefiles/dsi-env.tfstate"
+    acl            = "private"
+    encrypt        = true
+   
+  }
+}
